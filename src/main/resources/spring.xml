@@ -7,6 +7,7 @@
     <bean id="alien" class="com.nishanthan.Alien">
         <property name="framework" value="spring" ></property>
         <property name="laptop" ref="laptop" ></property>
+        <constructor-arg value="Software Engineer" ></constructor-arg>
     </bean>
     <bean id="vehicle" class="com.nishanthan.Vehicle" scope="prototype"></bean>
     <bean id="laptop" class="com.nishanthan.Laptop"></bean>

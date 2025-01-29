@@ -3,6 +3,15 @@ package com.nishanthan;
 public class Alien {
     private String framework;
     private Laptop laptop;
+    private String role;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 
     public Laptop getLaptop() {
         return laptop;
@@ -22,6 +31,10 @@ public class Alien {
 
     public Alien() {
         System.out.println("Alien obj created");
+    }
+
+    public Alien(String role) {
+        this.role = role;
     }
 
     public void code() {
