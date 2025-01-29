@@ -57,3 +57,27 @@
   - Object will created only for the classes used in the code, not for all listed in the xml file.
   - For every obj reference spring will create new object for the class not same obj for all the references.
   - Changes in the property of one obj reference will not affect for other reference since spring will create new obj for all references
+
+## Setter Injection
+
+    - If instance variables values are different then we usually pass parameters to constructors while creating an obj.
+    - If the value is default then we have two ways
+        1. Set values to the variable while declaring on class.
+            ```
+                private String framework = "Spring";
+                ```
+        2. Set values on bean declaration on xml using **property** tag.
+            ```
+                <bean id="alien" class="com.nishanthan.Alien">
+                    <property name="framework" value="spring" ></property>
+                </bean>
+            ```
+    - If we need to set for object instead of variables use **ref** with property. Also note that obj reference is also an variable
+        ```
+            <bean id="alien" class="com.nishanthan.Alien">
+                <property name="framework" value="spring" ></property>
+                <property name="laptop" ref="laptop" ></property>
+            </bean>
+        ```
+    - But to set from xml file we need to define the getters and setters for those variables. And that getter setter should defined with the variable name not nothing else.
+    - If framework means then getFramework() and setFramework() not like getFrameworks() or getFramework1().
