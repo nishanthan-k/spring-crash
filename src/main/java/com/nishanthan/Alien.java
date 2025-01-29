@@ -4,6 +4,15 @@ public class Alien {
     private String framework;
     private Laptop laptop;
     private String role;
+    private float yoe;
+
+    public float getYoe() {
+        return yoe;
+    }
+
+    public void setYoe(float yoe) {
+        this.yoe = yoe;
+    }
 
     public String getRole() {
         return role;
@@ -33,8 +42,9 @@ public class Alien {
         System.out.println("Alien obj created");
     }
 
-    public Alien(String role) {
+    public Alien(String role, float yoe) {
         this.role = role;
+        this.yoe = yoe;
     }
 
     public void code() {

@@ -9,6 +9,7 @@ public class App {
         obj.code();
         System.out.println(obj.getFramework());
         System.out.println(obj.getRole());
+        System.out.println(obj.getYoe());
 
         context.close();
     }
