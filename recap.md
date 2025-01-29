@@ -149,11 +149,12 @@
 
     - If we observe properly all obj will have unique type(class) so we can use that as the reference point for autowire.
     - So eventhough if we have multiple obj references we can indentify it by it's type since all have unique type / class.
+    - If we are created the class by implementing from common interface then the type of those objects will be same on that scenario we have to explicitly assign **primary** attribute to **true** to anyone of the bean to mark it as deafult bean if bean is not specified.
 
     ```
         <bean id="alien" class="com.nishanthan.Alien" autowire="byType"></bean>
         <bean id="vehicle" class="com.nishanthan.Vehicle" scope="prototype"></bean>
-        <bean id="laptop" class="com.nishanthan.Laptop"></bean>
+        <bean id="laptop" class="com.nishanthan.Laptop" primary="true"></bean>
         <bean id="computer" class="com.nishanthan.Computer"></bean>
 
         // we can define it with any name we want
