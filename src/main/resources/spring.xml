@@ -5,5 +5,6 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="alien" class="com.nishanthan.Alien"></bean>
+    <bean id="vehicle" class="com.nishanthan.Vehicle" scope="prototype"></bean>
 
 </beans>
