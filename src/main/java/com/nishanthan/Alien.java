@@ -2,6 +2,15 @@ package com.nishanthan;
 
 public class Alien {
     private String framework;
+    private Laptop laptop;
+
+    public Laptop getLaptop() {
+        return laptop;
+    }
+
+    public void setLaptop(Laptop laptop) {
+        this.laptop = laptop;
+    }
 
     public String getFramework() {
         return framework;
@@ -17,5 +26,6 @@ public class Alien {
 
     public void code() {
         System.out.println("I'm Coding.....");
+        laptop.compile();
     }
 }
