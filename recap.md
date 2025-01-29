@@ -120,3 +120,48 @@
         <constructor-arg value="Software Engineer" ></constructor-arg>
       </bean>
   ```
+
+## Autowire
+
+- We need to pass the value to all the instance variables either via by setting an default value on code or by setting it on bean definition.
+- But handling these values on bean definition for an large application is hard so Spring introduced an concept called **Autowire**.
+- There are two types for autowire.
+
+  1. byName
+  2. byType
+
+  - **byName**:
+
+    - If we are using byName then the bean id and the name we defined for the obj on code should be same.
+    - But if the obj reference increases, this approach is also become hard to manage. That's byType is introduced
+
+      ```
+          <bean id="alien" class="com.nishanthan.Alien" autowire="byName">
+              <property name="framework" value="spring" ></property>
+          </bean>
+          <bean id="laptop" class="com.nishanthan.Laptop"></bean>
+
+          // it's reference on code must be with same name
+          private Laptop laptop; // not like private Laptop lap;
+      ```
+
+  - **byType**:
+
+    - If we observe properly all obj will have unique type(class) so we can use that as the reference point for autowire.
+    - So eventhough if we have multiple obj references we can indentify it by it's type since all have unique type / class.
+
+    ```
+        <bean id="alien" class="com.nishanthan.Alien" autowire="byType"></bean>
+        <bean id="vehicle" class="com.nishanthan.Vehicle" scope="prototype"></bean>
+        <bean id="laptop" class="com.nishanthan.Laptop"></bean>
+        <bean id="computer" class="com.nishanthan.Computer"></bean>
+
+        // we can define it with any name we want
+        private Laptop lap;
+        private Computer comp;
+
+        /*
+            See variable name and bean id are different but still class for both are same.
+            So we don't need to define all the obj reference with property tag.
+        */
+    ```

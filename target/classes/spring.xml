@@ -4,13 +4,13 @@
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="alien" class="com.nishanthan.Alien">
+    <bean id="alien" class="com.nishanthan.Alien" autowire="byName">
         <property name="framework" value="spring" ></property>
-        <property name="laptop" ref="laptop" ></property>
         <constructor-arg value="Software Engineer" ></constructor-arg>
         <constructor-arg value="2.5" ></constructor-arg>
     </bean>
     <bean id="vehicle" class="com.nishanthan.Vehicle" scope="prototype"></bean>
     <bean id="laptop" class="com.nishanthan.Laptop"></bean>
+    <bean id="comp" class="com.nishanthan.Computer"></bean>
 
 </beans>

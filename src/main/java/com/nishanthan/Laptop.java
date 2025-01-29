@@ -7,6 +7,6 @@ public class Laptop {
     }
 
     public void compile() {
-        System.out.println("Code is compiled...");
+        System.out.println("Code is compiled on Laptop...");
     }
 }

@@ -3,6 +3,16 @@ package com.nishanthan;
 public class Alien {
     private String framework;
     private Laptop laptop;
+    private Computer comp;
+
+    public Computer getComp() {
+        return comp;
+    }
+
+    public void setComp(Computer comp) {
+        this.comp = comp;
+    }
+
     private String role;
     private float yoe;
 
@@ -50,5 +60,6 @@ public class Alien {
     public void code() {
         System.out.println("I'm Coding.....");
         laptop.compile();
+        comp.compile();
     }
 }
