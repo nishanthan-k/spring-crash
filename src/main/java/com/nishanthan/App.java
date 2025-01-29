@@ -7,6 +7,7 @@ public class App {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
         Alien obj = (Alien) context.getBean("alien");
         obj.code();
+        System.out.println(obj.getFramework());
 
         context.close();
     }

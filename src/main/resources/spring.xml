@@ -4,7 +4,9 @@
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="alien" class="com.nishanthan.Alien"></bean>
+    <bean id="alien" class="com.nishanthan.Alien">
+        <property name="framework" value="spring" ></property>
+    </bean>
     <bean id="vehicle" class="com.nishanthan.Vehicle" scope="prototype"></bean>
 
 </beans>
