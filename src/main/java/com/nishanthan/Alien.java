@@ -3,14 +3,14 @@ package com.nishanthan;
 public class Alien {
     private String framework;
     private Laptop laptop;
-    private Computer comp;
+    private Computer desktop;
 
     public Computer getComp() {
-        return comp;
+        return desktop;
     }
 
-    public void setComp(Computer comp) {
-        this.comp = comp;
+    public void setComp(Computer desk) {
+        this.desktop = desk;
     }
 
     private String role;
@@ -60,6 +60,6 @@ public class Alien {
     public void code() {
         System.out.println("I'm Coding.....");
         laptop.compile();
-        comp.compile();
+        desktop.compile();
     }
 }
